@@ -1,35 +1,29 @@
 import unittest
 
-#기본적으로 아래와 같이 Import를 추천
-from chapter2.ch06.pal import Solution
 
-'''
-#아래와 같이 Cut & Paste를 해도 된다. 
+#from chapter2.ch06.pal import Solution
+
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
+    def isPalindrome(self, s):
         strs = []
+
         for char in s:
+            print("char:{}".format(char))
             if char.isalnum():
                 strs.append(char.lower())
 
-        # 팰린드롬 여부 판별
         while len(strs) > 1:
             if strs.pop(0) != strs.pop():
                 return False
 
         return True
 
-'''
-
-
-#메인 함수는 이렇게
 if __name__ == "__main__":
-    print('hi')
+    a = [1, 2, 4]
+    print(a.pop())
 
+    '''
     a = Solution()
-    result = a.isPalindrome("ala")
-
+    result = a.isPalindrome("111111")
     print(result)
-
-
-
+    '''

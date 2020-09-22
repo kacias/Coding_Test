@@ -1,3 +1,4 @@
+#1000번 문제 list 의 2개의 합으로 Target 만드는 문제
 from typing import List
 
 
@@ -7,3 +8,4 @@ class Solution:
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return [i, j]
+
