@@ -2,8 +2,6 @@ from typing import List
 
 
 '''
-처음에 문제를 이해하는 데 정말 오래 걸렸다. 지금도 정확히 이해한 것인지 모르겠지만 문제를 통과한 것으로 보면 맞게 이해한 것으로 생각된다.
-
 주어지는 input에는 두 가지 특성의 데이터가 존재한다. 하나는 'letter-logs'이고 다른 하나는 'digit-log'이다. 그리고 output은 다음과 같은 제약조건을 가진다.
 
 logs의 각 인자의 첫번째 단어를 identifier로 칭한다.
@@ -30,6 +28,8 @@ class Solution:
 
 if __name__ == "__main__":
 
+
+    #-----------------------
     #split()
     '''
     a = "naver daum"
@@ -48,6 +48,7 @@ if __name__ == "__main__":
     print(c)
     '''
 
+    #--------------------------
     #isdigit()
     '''
     e="111"
@@ -63,3 +64,78 @@ if __name__ == "__main__":
 
     print(b)
     '''
+
+    '''
+    #----------------------
+    #람다식
+    a = lambda x: x*x
+    print(a(2))
+
+    #튜플로 반환
+    b = lambda x: (x+1, x-1)
+    print(b(2))
+    print(type(b(2)))
+
+    #리스트로 반환
+    b = lambda x: [x+1, x-1]
+    print(b(2))
+    print(type(b(2)))
+
+    #람다 함수와 리스트의 결합 map
+    a = [1,2,3]
+    c = list(map(lambda x: x+1, a))
+    print(c)
+    print(type(c))
+
+    #람다 함수와 2개의 리스트의 결합 map
+    a = [1,2,3]
+    b = [5,6,7]
+    c = list(map(lambda x, y: x+y, a, b))
+    print(c)
+    print(type(c))
+    '''
+
+    #-----------------------
+    #sort
+    a= [1,5,4,3]
+    a.sort()
+    b = sorted(a)
+    print(a)
+    print(b)
+
+    c = {"c":1, "b":2, "a":3}
+    e = {2:"hi", 1:"ne", 3:"ke"}
+
+    #sort는 리스트만
+    #c.sort()
+    #print(c)
+
+    #sorted 는 딕셔너리도 가능
+    #key 값 기준으로 정렬됨
+    d = sorted(c)
+    print(d)
+
+    k = sorted(e)
+    print(k)
+    print(k[2])
+
+
+    student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'C', 12),
+    ('dave', 'B', 10),
+    ]
+
+    #정렬 기준값
+    f = sorted(student_tuples, key = lambda x: x[2])
+    print(f)
+
+    g = sorted(student_tuples, key=lambda x: x[1])
+    print(g)
+
+    k = sorted(student_tuples, key= lambda x: (x[2], x[1]))
+    print(k)
+
+    k = sorted(student_tuples, key= lambda x: (x[1], x[2]))
+    print(k)
+
