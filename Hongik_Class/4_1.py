@@ -15,7 +15,6 @@ class Solution:
 
 if __name__ == "__main__":
 
-
     '''
     a = Solution()
     b = a.mostCommonWord("apple banana", ["apple", "red"])
@@ -64,6 +63,5 @@ if __name__ == "__main__":
         lower_name.append(i.lower())
         print(i)
     print(lower_name)
-
 
     #name_list = [i for i in name]
