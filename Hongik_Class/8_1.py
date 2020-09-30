@@ -25,6 +25,8 @@ class Solution:
 
 '''
 
+#디버깅용 코드
+#높이 계산은 현재의 최대 높이에서 현재 높이를 빼는 것 
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height:
