@@ -4,6 +4,8 @@ from typing import List
 import time
 
 
+
+#Brute-Force
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
@@ -13,7 +15,8 @@ class Solution:
 
 
 
-'''
+
+#검색 범위 축소 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i, n in enumerate(nums):
@@ -22,32 +25,32 @@ class Solution:
 
             print("i:{}".format(i))
             print("n:{}".format(n))
-            print("complement1:{}".format(complement))
+            print("complement:{}".format(complement))
 
 
             if complement in nums[i + 1:]:
-                print("complement2:{}".format(complement))
 
                 return nums.index(n), nums[i + 1:].index(complement) + (i + 1)  #검색 범위 축소
+                #return nums.index(n), nums.index(complement)  #그냥 찾기 
 
-'''
 
-'''
+#딕셔너리: 해쉬 테이블로 더 빠르다.  
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_map = {}
+        print("nums:{}".format(nums))
         # 키와 값을 바꿔서 딕셔너리로 저장
         for i, num in enumerate(nums):
             nums_map[num] = i
 
+        print("nums_map:{}".format(nums_map)) 
         # 타겟에서 첫 번째 수를 뺀 결과를 키로 조회
         for i, num in enumerate(nums):
             if target - num in nums_map and i != nums_map[target - num]:
                 return nums.index(num), nums_map[target - num]
 
-'''
 
-'''
+#for 문 통합 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_map = {}
@@ -59,14 +62,17 @@ class Solution:
 
             #print(nums_map)
 
-'''
 
-'''
+
+
+#======================================================================
+#가장 빠른거
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         left, right = 0, len(nums) - 1
 
-        #sort(?)
+        #sort(?): 정렬을 하면 인덱스값이 흩뜨려짐.
+
         while not left == right:
 
             print("left:{}".format(left))
@@ -81,19 +87,19 @@ class Solution:
             else:
                 return left, right
 
-'''
+
 
 
 if __name__ == "__main__":
 
     #==========
-    '''
+
     a = Solution()
-    b= a.twoSum([1,2,3,4,5], 5)
+    b= a.twoSum([1,2,5,9,5], 7)
     print(b)
+
+
     '''
-
-
     #================================================
     #시간 체크
     s_time = time.time()
@@ -107,28 +113,24 @@ if __name__ == "__main__":
     #=================================================
 
 
-
-
-
     #==========================
     #list.index(), 리스트를 검색해서 해당 값이 있으면 index값을 반환
-    '''
+
     nums = [1,2,4]
     print(nums.index(4))
     print(nums.index(1))
-'''
+
 
     #==================
     #if i in List
     #리스트 안에 특정 값을 찾을 때
-    '''
+
     nums = [1,2,3]
     if 1 in nums:
         print("find out:{}".format(1))
 
-    '''
 
-    '''
+
     #=======================
     #무난한 해법
     nums = [1,2,4]
@@ -140,6 +142,7 @@ if __name__ == "__main__":
             print( nums.index(i), nums.index(target) )
 
     '''
+
 
 
 

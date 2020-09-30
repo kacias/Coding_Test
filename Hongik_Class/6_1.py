@@ -33,13 +33,11 @@ class Solution:
         # 팰린드롬 판별 및 투 포인터 확장
         def expand(left: int, right: int) -> str:
             while left >= 0 and right <= len(s) and s[left] == s[right - 1]:
-
                 print("left:{}".format(left))
                 print("right:{}".format(right))
-
                 left -= 1
                 right += 1
-                
+
             #발견된 서브 스트링 반환
             return s[left + 1:right - 1]
 
@@ -74,6 +72,9 @@ if __name__ == "__main__":
     print("final result:{}".format(b))
 
 
+    #==========
+    #중첩 함수
+
 
     #==============
     #숫자일 경우 가장 큰 값
@@ -103,7 +104,7 @@ if __name__ == "__main__":
     names = ['Suh', 'Adrian', 'Bill', 'Jonathan']
     longest = max(names, key= lambda n: len(n))
     print(longest)
-
     '''
+
 
 
