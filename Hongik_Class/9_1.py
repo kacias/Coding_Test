@@ -2,7 +2,7 @@ from typing import List
 
 
 #배열을 입력받아 합으로 0을 만들 수 있는 3개의 앨리먼트를 출력하라.
-'''
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         results = []
@@ -24,9 +24,9 @@ class Solution:
 
         return results
 
+
+
 '''
-
-
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         results = []
@@ -58,7 +58,7 @@ class Solution:
                     right -= 1
 
         return results
-
+'''
 
 
 if __name__ == "__main__":

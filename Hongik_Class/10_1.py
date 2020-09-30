@@ -1,5 +1,6 @@
 from typing import List
 
+'''
 #n개의 페어를 이용한 min(a,b)의 합으로 만들 수 있는 가장 큰 수를 출력하라 .
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
@@ -17,9 +18,9 @@ class Solution:
                 pair = []
 
         return sum
-
-
 '''
+
+
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
         sum = 0
@@ -31,7 +32,7 @@ class Solution:
                 sum += n
 
         return sum
-'''
+
 
 #=======================================
 if __name__ == "__main__":
