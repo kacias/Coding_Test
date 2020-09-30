@@ -1,6 +1,5 @@
 
-#Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
-#Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
+#가장 긴 팰린드롬 부분 문자열
 
 '''
 class Solution:
@@ -30,11 +29,18 @@ class Solution:
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
+
         # 팰린드롬 판별 및 투 포인터 확장
         def expand(left: int, right: int) -> str:
             while left >= 0 and right <= len(s) and s[left] == s[right - 1]:
+
+                print("left:{}".format(left))
+                print("right:{}".format(right))
+
                 left -= 1
                 right += 1
+                
+            #발견된 서브 스트링 반환
             return s[left + 1:right - 1]
 
         # 해당 사항이 없을때 빠르게 리턴
@@ -44,12 +50,14 @@ class Solution:
         result = ''
         # 슬라이딩 윈도우 우측으로 이동
         for i in range(len(s) - 1):
-            print(i)
+            print("----------------------")
+            print("iter:{}".format(i))
+            print("character:{}".format(s[i]))
             print("result:{}".format(result))
             print("expand1:{}".format(expand(i, i + 1)))
             print("expand2:{}".format(expand(i, i + 2)))
 
-
+            #현재까지 발견된 가장 서브 스트링 팰린드롬
             result = max(result,
                          expand(i, i + 1),
                          expand(i, i + 2),
@@ -60,6 +68,12 @@ class Solution:
 
 
 if __name__ == "__main__":
+
+    a = Solution()
+    b = a.longestPalindrome("23abba54")
+    print("final result:{}".format(b))
+
+
 
     #==============
     #숫자일 경우 가장 큰 값
@@ -90,22 +104,6 @@ if __name__ == "__main__":
     longest = max(names, key= lambda n: len(n))
     print(longest)
 
-
-    #=================================
-    #두 개 이상의 리스트 값 비교
-
-    a = ["11134", "22323", "32", "sdf4", "10"]
-    b = ["1sdfsdf34", "sdgs323", "0werewr2", "0werwerwdf4", "werwer10"]
-    
-    print(max(a, key=len))
-    print(max(b, key=len))
-    print(max(a, b, key=len))
     '''
-
-
-
-    a = Solution()
-    b = a.longestPalindrome(["2", "12221", "tomato", "appppa", "0000000000000"])
-    print("final result:{}".format(b))
 
 
