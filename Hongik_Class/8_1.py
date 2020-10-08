@@ -3,11 +3,12 @@ from typing import List
 #========================
 #빗물 트래핑
 #투 포인터 방식
-
+'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height:
             return 0
+        
         volume = 0
         left, right = 0, len(height) - 1
         left_max, right_max = height[left], height[right]
@@ -22,12 +23,14 @@ class Solution:
                 volume += right_max - height[right]
                 right -= 1
         return volume
-
-
-
 '''
+
+
+
+
 #디버깅용 코드
 #높이 계산은 현재의 최대 높이에서 현재 높이를 빼는 것
+"""
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height:
@@ -54,13 +57,11 @@ class Solution:
                 volume += right_max - height[right]
                 right -= 1
         return volume
+"""
 
 '''
-
-
 #==========================
 #스택 방식
-'''
 class Solution:
     def trap(self, height: List[int]) -> int:
         stack = []
@@ -83,9 +84,9 @@ class Solution:
 
             stack.append(i)
         return volume
-'''
 
 '''
+
 #-----------------------
 #디버깅
 class Solution:
@@ -135,7 +136,7 @@ class Solution:
             print("current stack:{}".format(stack))
         return volume
 
-'''
+
 
 
 if __name__ == "__main__":
@@ -148,7 +149,8 @@ if __name__ == "__main__":
     s.append(3)
     s.append(4)
     s.append(9)
-
+    s.pop()
+    s.pop()
     print(s)
     #맨 마지막을 보여준다.
     print(s[-1])
