@@ -48,6 +48,7 @@ class SingleLinkedList:
         node.next = new_node
         self.list_size += 1
 
+    #중간 삽입 함수
     def InsertMiddle(self, num, data):
         if self.head.next == None:
             InsertLast(data)
@@ -61,9 +62,7 @@ class SingleLinkedList:
         self.list_size += 1
 
 
-
-
-
+    #출력 함수
     def __str__(self):
         print_list = '['
         node = self.head
@@ -75,6 +74,29 @@ class SingleLinkedList:
             print_list += ", "
         print_list += "]"
         return print_list
+
+    #헤더 삭제 함수
+    def DeleteHead(self):
+        node = self.head
+        self.head = node.next
+        del node
+
+    #특정 위치 노드 삭제
+    def DeleteNode(self, num):
+        if self.list_size < 1:
+            return #underflow
+        elif self.list_size < num:
+            return #overflow
+
+        if num == 0:
+            self.DeleteHead()
+            return
+
+        node = self.SelectNode(num-1)
+        node.next = node.next.next
+        del_node = node.next
+        del del_node
+
 
 
 
@@ -104,9 +126,20 @@ if __name__ == "__main__":
     a.InsertFirst(3000)
     print(a)
 
-
+    #중간에 삽입
     a.InsertMiddle(1, 999)
     print(a)
+    a.InsertMiddle(5, 999)
+    print(a)
+
+    #중간 인덱스
+    a.DeleteNode(2)
+    print("after mid delete:\n{}".format(a))
+
+    #헤더 삭제
+    a.DeleteHead()
+    print("after head delete:\n{}".format(a))
+
 
     #맨 마지막 노드 추가
     #a.InsertLast(1000)
