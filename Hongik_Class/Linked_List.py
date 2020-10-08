@@ -1,4 +1,5 @@
 #https://blex.me/@baealex/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%9C-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%97%B0%EA%B2%B0-%EB%A6%AC%EC%8A%A4%ED%8A%B8
+#위의 코드 중 오류 수정 버전
 
 class Node:
     def __init__(self, data):
@@ -79,6 +80,7 @@ class SingleLinkedList:
     def DeleteHead(self):
         node = self.head
         self.head = node.next
+        self.list_size -= 1
         del node
 
     #특정 위치 노드 삭제
@@ -95,8 +97,11 @@ class SingleLinkedList:
         node = self.SelectNode(num-1)
         node.next = node.next.next
         del_node = node.next
+        self.list_size -= 1
         del del_node
 
+    def size(self):
+        return str(self.list_size)
 
 
 
@@ -140,9 +145,8 @@ if __name__ == "__main__":
     a.DeleteHead()
     print("after head delete:\n{}".format(a))
 
-
-    #맨 마지막 노드 추가
-    #a.InsertLast(1000)
+    #리스트 크기 확인
+    print(a.size())
 
 
     #print(a.SelectNode(2))
