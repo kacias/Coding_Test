@@ -1,5 +1,9 @@
 #https://blex.me/@baealex/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%9C-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%97%B0%EA%B2%B0-%EB%A6%AC%EC%8A%A4%ED%8A%B8
 #위의 코드 중 오류 수정 버전
+#Node는 [ Data | Next ]
+
+#                     <Head>
+# SingLinkedList는    [ Data | Next ] --> [ Data | Next ] --> [ Data | Next ]
 
 class Node:
     def __init__(self, data):
