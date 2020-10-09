@@ -37,7 +37,7 @@ class Solution:
                 print("prev:{} <- node ".format(prev.val))
                 print("node:{}".format(node.val))
 
-            counter +=1
+            counter += 1
 
         return prev
 
