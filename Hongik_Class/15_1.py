@@ -39,7 +39,6 @@ class Solution:
 
             counter +=1
 
-
         return prev
 
 
