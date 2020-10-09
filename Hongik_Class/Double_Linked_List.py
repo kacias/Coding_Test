@@ -129,19 +129,15 @@ if __name__ == "__main__":
     a = DualLinkedList(100)
     print(a.size())
 
-
     a.insertLast(2342)
     a.insertLast(777)
-
-    a.insertMiddleAfter(1, 100)
+    a.insertMiddleAfter(1, 300)
+    a.insertMiddleAfter(2, 400)
 
     print(a.size())
-
     print(a)
 
     a.selectNode(2)
-
-
 
     #basic
     #a = DualLinkedList(100)
