@@ -8,6 +8,7 @@ class ListNode:
         self.next = None
 
 
+
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         q: List = []
@@ -37,25 +38,26 @@ if __name__ == "__main__":
     f = [1, 2, 3, 6, 8, 10]
     print(f.pop(0))
     print(f.pop())
+    print(f)
 
 
-    '''
     #------------------------
     #list 기본 사용법 
     a = ListNode("a")
     b = ListNode("b")
-    c = ListNode("a")
-    e = ListNode("b")
+    c = ListNode("b")
+    e = ListNode("a")
 
     a.next = b
     b.next = c
     c.next = e
-    c.next = None
+    e.next = None
 
     print(a.val)
     print(a.next.val)
     print(a.next.next.val)
     #------------------------
+
     #일반값을 넣으면 실패
     #d=10
     '''
@@ -63,18 +65,19 @@ if __name__ == "__main__":
     #----------------
     #노드 출력
     '''
+
     q = []
     node = a
     while node is not None:
         q.append(node.val)
         node = node.next
     print(q)
-    '''
 
 
-    '''
+
+
     aa = Solution()
-    print(aa.isPalindrome(b))
-    '''
+    print(aa.isPalindrome(a))
+
 
 

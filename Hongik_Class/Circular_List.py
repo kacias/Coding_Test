@@ -25,7 +25,8 @@ class CircleLinkedList:
         print_list = '[ '
         node = self.head
         while True:
-            print_list += str(node.data)
+            if node:
+                print_list += str(node.data)
             if node == self.tail:
             # 단순 연결 리스트와 달리
             # 노드가 테일 노드면 끝난다
@@ -110,14 +111,18 @@ if __name__ == "__main__":
     a = CircleLinkedList(100)
     print(a.size())
 
+
     a.insertFirst(999)
     a.insertFirst(9990)
 
+
     a.insertLast(77)
 
-    a.insertMiddle(3, 1000)
+    a.insertMiddle(2, 500)
 
     b, c = a.get_head_tail()
+
     print("head:{} tail:{}".format(b, c))
+
 
     print(a)
