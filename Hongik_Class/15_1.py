@@ -20,11 +20,29 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         node, prev = head, None
 
+        counter = 0
         while node:
+
+            print("============================")
+            print("iter:{}".format(counter))
             next, node.next = node.next, prev
+
+            if next and node.next:
+                print("next <- node.next:{}".format(next.val))
+                print("node.next <- prev:{}".format(node.next.val))
+
             prev, node = node, next
 
+            if prev and node:
+                print("prev:{} <- node ".format(prev.val))
+                print("node:{}".format(node.val))
+
+            counter +=1
+
+
         return prev
+
+
 
 
 '''
@@ -46,8 +64,8 @@ class Solution:
             return reverse(next, node)
 
         return reverse(head)
-
 '''
+
 
 #======================================
 #메인 함수
