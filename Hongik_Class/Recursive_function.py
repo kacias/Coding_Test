@@ -38,7 +38,11 @@ def factorial(n):
 print(factorial(5))
 '''
 
+
+
+
 #=====================================
+'''
 #재귀 함수는 for문으로 변환 가능
 def factorial(n):
     result = 1
@@ -47,6 +51,7 @@ def factorial(n):
     return result
 
 print(factorial(4))
+'''
 
 #====================================
 #합

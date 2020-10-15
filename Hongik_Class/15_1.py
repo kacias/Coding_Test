@@ -15,6 +15,7 @@ class Solution:
 
         return reverse(head)
 '''
+'''
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
@@ -41,10 +42,10 @@ class Solution:
 
         return prev
 
-
-
-
 '''
+
+
+
 #디버깅
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
@@ -53,17 +54,20 @@ class Solution:
             print("====================================")
 
             if not node:
+                print("no node")
                 return prev
 
             if node.next and prev:
-                print("swapping between {} <--> {}".format(node.next.val, prev.val))
+                print("new link at {}, {}".format(node.next.val, prev.val))
+
             next, node.next = node.next, prev
 
 
             return reverse(next, node)
 
+        print("head:{}".format(head.val))
         return reverse(head)
-'''
+
 
 
 #======================================

@@ -20,18 +20,16 @@ class Solution:
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         if (not l1) or (l2 and l1.val > l2.val):
-
+            print("l1 <-> l2 swaping")
             l1, l2 = l2, l1
 
         if l1:
-            print("-----------------------------------")
-            print("l1_before:{}".format(l1.val))
-            print("l2_before:{}".format(l2.val))
+            print("go deeper")
+            print("current_l1:{}".format(l1.val))
+            if l2:
+                print("current_l2:{}".format(l2.val))
 
             l1.next = self.mergeTwoLists(l1.next, l2)
-
-            print("l1_after:{}".format(l1.val))
-            print("l2_after:{}".format(l2.val))
 
         return l1
 
@@ -43,17 +41,18 @@ class Solution:
 
 if __name__=="__main__":
 
-
+    '''
     a = ListNode(1)
     aa = Solution()
     aa.test(a)
-
     '''
+
+
     #-----------------------
     #list 1 생성
     a = ListNode(1)
     b = ListNode(2)
-    c = ListNode(4)
+    c = ListNode(5)
 
     a.next = b
     b.next = c
@@ -70,9 +69,9 @@ if __name__=="__main__":
 
     #-----------------------
     #list 2 생성
-    d = ListNode(1)
-    e = ListNode(3)
-    f = ListNode(4)
+    d = ListNode(3)
+    e = ListNode(4)
+    f = ListNode(7)
 
     d.next = e
     e.next = f
@@ -101,5 +100,5 @@ if __name__=="__main__":
 
     print(q)
     #===================================
-    '''
+
 
