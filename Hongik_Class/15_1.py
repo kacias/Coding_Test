@@ -62,10 +62,10 @@ class Solution:
 
             next, node.next = node.next, prev
 
-
             return reverse(next, node)
 
         print("head:{}".format(head.val))
+
         return reverse(head)
 
 

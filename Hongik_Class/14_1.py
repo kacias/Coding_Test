@@ -19,8 +19,13 @@ class Solution:
 #debugging
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        print("================================")
         if (not l1) or (l2 and l1.val > l2.val):
             print("l1 <-> l2 swaping")
+            if l1:
+                print("current_l1:{}".format(l1.val))
+            if l2:
+                print("current_l2:{}".format(l2.val))
             l1, l2 = l2, l1
 
         if l1:
@@ -52,7 +57,7 @@ if __name__=="__main__":
     #list 1 생성
     a = ListNode(1)
     b = ListNode(2)
-    c = ListNode(5)
+    c = ListNode(4)
 
     a.next = b
     b.next = c
@@ -69,9 +74,9 @@ if __name__=="__main__":
 
     #-----------------------
     #list 2 생성
-    d = ListNode(3)
-    e = ListNode(4)
-    f = ListNode(7)
+    d = ListNode(1)
+    e = ListNode(3)
+    f = ListNode(4)
 
     d.next = e
     e.next = f
