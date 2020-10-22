@@ -35,6 +35,7 @@ if __name__=="__main__":
     #딕셔너리  {"a": 1, "b": 2}
     #셋 {'a', 'b'}
 
+    '''
     set1 = {5,7,10}
     print(set1)
     set1.add(100)
@@ -45,6 +46,7 @@ if __name__=="__main__":
     set2 = set([1,4,5])
     print(set2)
 
+    #문자열을 set로 사용해서 sorted 시키면 기본 구성 요소끼리 정렬시킬 수 있음 
     s = "abcdefff"
     print(set(s))
     print(sorted(set(s)))
@@ -53,7 +55,7 @@ if __name__=="__main__":
     #문자열 내에서 특정 char 인덱스 값
     print(s.index("c")) #해당 character가 있는 index 값 반환
     print(s[s.index("c"):]) #해당 character 있는 index 이후 문자열 반환
-
+    '''
 
     #-----------------------
     s= "abcabcee"
