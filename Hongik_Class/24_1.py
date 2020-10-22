@@ -1,3 +1,6 @@
+#https://www.daleseo.com/python-queue/
+#https://monsieursongsong.tistory.com/5
+
 class MyQueue:
     def __init__(self):
         self.input = []
@@ -29,3 +32,6 @@ if __name__=="__main__":
     b = a.pop()
     print(b)
 
+    print(a)
+    a.peek()
+    print(a)
