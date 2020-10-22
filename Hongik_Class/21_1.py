@@ -35,7 +35,7 @@ if __name__=="__main__":
     #딕셔너리  {"a": 1, "b": 2}
     #셋 {'a', 'b'}
 
-
+    '''
     set1 = {5,7,10}
     print(set1)
     set1.add(100)
@@ -55,7 +55,7 @@ if __name__=="__main__":
     #문자열 내에서 특정 char 인덱스 값
     print(s.index("c")) #해당 character가 있는 index 값 반환
     print(s[s.index("c"):]) #해당 character 있는 index 이후 문자열 반환
-
+    '''
 
     #-----------------------
     s= "abcabcee"

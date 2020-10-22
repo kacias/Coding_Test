@@ -57,7 +57,7 @@ class Solution:
     
 if __name__=="__main__":
 
-
+    '''
     d = "aabbcd"
     print(collections.Counter(d))
     e= [1,2,4,2,3,1]
@@ -81,6 +81,7 @@ if __name__=="__main__":
             print("confirm:{}".format(c))
 
     #-----------------------
+    '''
 
     s= "cbaabc"
     a = Solution()
