@@ -13,12 +13,22 @@ class Solution:
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         # 집합으로 정렬
+
+        print("input:{}".format(s))
+        print("input sorted(set(s)):{}".format(sorted(set(s))))
+
+
         for char in sorted(set(s)):
             print("====================")
-            print("input_s:{}".format(s))
             print("char:{}".format(char))
             suffix = s[s.index(char):]
             print("suffix:{}".format(suffix))
+
+
+            print("set(s):{}".format(set(s)))
+            print("set(suffix):{}".format(set(suffix)))
+
+
             # 전체 집합과 접미사 집합이 일치할때 분리 진행
             if set(s) == set(suffix):
                 print("set:{} == set_suffix:{}".format(set(s), set(suffix)))
@@ -46,6 +56,8 @@ if __name__=="__main__":
     set2 = set([1,4,5])
     print(set2)
 
+    '''
+    '''
     #문자열을 set로 사용해서 sorted 시키면 기본 구성 요소끼리 정렬시킬 수 있음 
     s = "abcdefff"
     print(set(s))
@@ -55,10 +67,11 @@ if __name__=="__main__":
     #문자열 내에서 특정 char 인덱스 값
     print(s.index("c")) #해당 character가 있는 index 값 반환
     print(s[s.index("c"):]) #해당 character 있는 index 이후 문자열 반환
+    print(set(s[s.index("c"):])) #해당 character 있는 index 이후 문자열 반환
     '''
 
     #-----------------------
-    s= "abcabcee"
+    s= "ebcabc"
     a = Solution()
     result = a.removeDuplicateLetters(s)
     print(result)

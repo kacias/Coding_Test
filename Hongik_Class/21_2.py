@@ -23,16 +23,17 @@ class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         counter, seen, stack = collections.Counter(s), set(), []
 
+        print("input_s:{}".format(s))
+
         for char in s:
             print("==================")
-            print("input_s:{}".format(s))
+
             print("char:{}".format(char))
             print("counter[char]:{}".format(counter[char]))
-            print("seen:{}".format(seen))
-            print("stack:{}".format(stack))
+            print("seen_before:{}".format(seen))
+            print("stack_before:{}".format(stack))
 
             counter[char] -= 1
-
 
             if char in seen:
                 print("continue--->")
@@ -46,9 +47,13 @@ class Solution:
 
                 seen.remove(stack.pop())
 
-
             stack.append(char)
             seen.add(char)
+
+            print("seen_after:{}".format(seen))
+            print("stack_after:{}".format(stack))
+
+
 
         return ''.join(stack)
 
@@ -79,9 +84,10 @@ if __name__=="__main__":
     for c in l:
         if c < l[-1]:
             print("confirm:{}".format(c))
-
-    #-----------------------
     '''
+    #-----------------------
+
+
 
     s= "cbaabc"
     a = Solution()
