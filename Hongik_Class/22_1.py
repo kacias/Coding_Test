@@ -30,7 +30,7 @@ class Solution:
             print("============================")
             print("i:{}".format(i))
             print("cur:{}".format(cur))
-            print("stack:{}".format(stack))
+            print("stack_before:{}".format(stack))
 
             # 현재 온도가 스택 값보다 높다면 정답 처리
             while stack and cur > T[stack[-1]]:
@@ -41,8 +41,10 @@ class Solution:
                 answer[last] = i - last
                 print("answer[last]:{}".format(answer[last]))
                 print("answer:{}".format(answer))
+                print("stack_inside:{}".format(stack))
 
             stack.append(i)
+            print("stack_after:{}".format(stack))
 
         return answer
 

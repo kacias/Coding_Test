@@ -54,7 +54,6 @@ class Solution:
             print("stack_after:{}".format(stack))
 
 
-
         return ''.join(stack)
 
 
