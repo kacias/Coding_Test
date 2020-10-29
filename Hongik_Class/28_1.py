@@ -54,7 +54,6 @@ class MyHashMap:
             p = p.next
         return -1
 
-
     # 삭제
     def remove(self, key: int) -> None:
         index = key % self.size

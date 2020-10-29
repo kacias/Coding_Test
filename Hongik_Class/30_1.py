@@ -50,11 +50,6 @@ class Solution:
         return max_length
 
 
-
-
-
-
-
 if __name__=="__main__":
 
     #s = "abcabcbb"

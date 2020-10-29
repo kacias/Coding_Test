@@ -108,7 +108,6 @@ if __name__=="__main__":
         print("popped data:{}".format(heapq.heappop(h)))
     '''
 
-
     '''
     s= [1,2,2,2,2,9,9,9]
     a = Solution()
