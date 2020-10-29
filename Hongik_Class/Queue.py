@@ -1,26 +1,30 @@
 
 #===============================
 #1) 리스트 사용
+'''
 queue = [4, 5, 6]
 
 #오른쪽 (Back) append = Enqueue
 queue.append(7)
 queue.append(8)
+print(queue)
 
 #왼쪽 (Front) pop = Dequeue
 print(queue.pop(0))
 print(queue.pop(0))
+print(queue)
 
 #추가 Back Popup
 print(queue.pop())
 print(queue.pop())
-
+print(queue)
+'''
 
 #=============================
 #2) queue 사용
 #데이터 추가/삭제는 O(1), 데이터 접근은 O(N)
 #스레드 프로그래밍용
-
+'''
 from queue import Queue
 
 queue1 = Queue()
@@ -29,10 +33,10 @@ queue1.put(100)
 queue1.put(200)
 print(queue1.get())
 print(queue1.get())
+'''
 
 
-
-
+'''
 #=============================
 #3) collections deque 사용
 #double-ended queue의 약자로 데이터를 양방향에서 추가하고 제거할 수 있는 자료 구조
@@ -62,6 +66,7 @@ print(queue2)
 print(queue2.pop())
 
 
+'''
 #=====================================
 #Queue 클래스 List로 구현
 

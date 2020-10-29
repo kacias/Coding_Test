@@ -84,11 +84,11 @@ if __name__=="__main__":
         if c < l[-1]:
             print("confirm:{}".format(c))
     '''
-    #-----------------------
+    #----------------------
 
 
-
-    s= "cbaabc"
+    s = "cbaeabc"
+    #s = "ebcabc"
     a = Solution()
     result = a.removeDuplicateLetters(s)
     print(result)
