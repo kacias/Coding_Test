@@ -19,6 +19,7 @@ class Solution:
         return count
 '''
 
+import collections
 #===============================================
 #디버깅
 class Solution:
@@ -47,8 +48,15 @@ class Solution:
 
 
 if __name__=="__main__":
-    s1 = "aA"
+    s1 = "bB"
     s2 = "aABbaAb"
+
+    #----------------------------------
+    #문제 해석
+    #카운터로 딕셔너리 생성 후, s1의 글자의 key값의 value의 합
+    print(collections.Counter(s2))
+    #---------------------------------
+
 
     a = Solution()
     result = a.numJewelsInStones(s1, s2)

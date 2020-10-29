@@ -21,6 +21,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         used = {}
         max_length = start = 0
+
         for index, char in enumerate(s):
             print("===========================")
             print("index:{}".format(index))
@@ -32,7 +33,12 @@ class Solution:
                 print("seen character!")
                 start = used[char] + 1
                 print("start:{}".format(start))
+
             else:  # 최대 부분 문자열 길이 갱신
+
+                #if used[char]:
+                #    print("start:{} = used[char]:{}".format(start, used[char]))
+
                 print("new character!")
                 max_length = max(max_length, index - start + 1)
                 print("max_length:{}".format(max_length))
@@ -51,7 +57,12 @@ class Solution:
 
 if __name__=="__main__":
 
-    s = "abcabcbb"
+    #s = "abcabcbb"
+    #s = "aaabbbabacb"
+    #i = "012345678910"  #인덱스 체크용
+
+    s = "aabbc"
+
     a = Solution()
     print(a.lengthOfLongestSubstring(s))
 
