@@ -39,7 +39,7 @@ class Solution:
                 #if used[char]:
                 #    print("start:{} = used[char]:{}".format(start, used[char]))
 
-                print("new character!")
+                print("New character or Reappearance!")
                 max_length = max(max_length, index - start + 1)
                 print("max_length:{}".format(max_length))
 
@@ -61,7 +61,7 @@ if __name__=="__main__":
     #s = "aaabbbabacb"
     #i = "012345678910"  #인덱스 체크용
 
-    s = "aabbc"
+    s = "aabbaac"
 
     a = Solution()
     print(a.lengthOfLongestSubstring(s))

@@ -45,6 +45,8 @@ class Solution:
 
 if __name__=="__main__":
 
+    #----------------------------
+    #min heap test
     heap =[]
 
     heapq.heappush(heap, 4)
@@ -67,7 +69,8 @@ if __name__=="__main__":
     l = [1,2,3,5,3,9]
     heapq.heapify(l)
     print(l)
-
+    #-----------------------------
+    
 
     '''
     s= [1,2,2,3,3,3]
