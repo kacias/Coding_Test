@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import *
 
 #================================
 #초기화
-'''
+
 app = QApplication(sys.argv)
 
 
@@ -19,7 +19,7 @@ print("before event loop")
 #여기서 무한 루프 
 app.exec_()
 print("after event loop")
-'''
+
 
 #=================================
 #하드 코딩 버튼 생성
@@ -54,7 +54,7 @@ if __name__ =="__main__":
 
 #=========================================
 #코딩으로 버튼 기능 만들기
-
+'''
 class ButtonlabelWindow(QMainWindow):
     def __init__ (self):
         super().__init__()
@@ -88,3 +88,4 @@ if __name__ == "__main__":
     window.show()
     app.exec_()
 
+'''
