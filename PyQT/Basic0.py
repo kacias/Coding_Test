@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import *
 
 #================================
 #초기화
-
+'''
 app = QApplication(sys.argv)
 
 
@@ -19,7 +19,7 @@ print("before event loop")
 #여기서 무한 루프 
 app.exec_()
 print("after event loop")
-
+'''
 
 #=================================
 #하드 코딩 버튼 생성
@@ -35,6 +35,21 @@ btn.show()
 
 app.exec_()
 '''
+
+#===========================================
+#여러개 위젯 생성
+
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
+app = QApplication([])
+window = QWidget()
+layout = QVBoxLayout()
+layout.addWidget(QPushButton('Top'))
+layout.addWidget(QPushButton('Bottom'))
+window.setLayout(layout)
+window.show()
+app.exec_()
+
+
 
 #===============================
 #윈도우 클래스 상속 받아서 생성
