@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 #=======================================
 #QT Designer 위치
-#C:\Users\SJK\anaconda3\Library\bin
+#C:\Users\retic\anaconda3\Library\bin
 
 #UI파일 연결
 form_class = uic.loadUiType("test.ui")[0]

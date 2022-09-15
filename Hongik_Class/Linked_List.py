@@ -67,8 +67,8 @@ class SingleLinkedList:
         new_node.next = temp_next
         self.list_size += 1
 
-
     #출력 함수
+
     def __str__(self):
         print_list = '['
         node = self.head
@@ -80,6 +80,7 @@ class SingleLinkedList:
             print_list += ", "
         print_list += "]"
         return print_list
+
 
     #헤더 삭제 함수
     def DeleteHead(self):
@@ -117,6 +118,7 @@ if __name__ == "__main__":
     '''
     head = Node(0)
     node_1 = Node(1)
+
     head.next = node_1
 
     print(head.data)
@@ -125,6 +127,7 @@ if __name__ == "__main__":
 
     #single liked list
     a = SingleLinkedList(100)
+    print(a)
 
     a.InsertLast(200)
     a.InsertLast(300)
@@ -141,6 +144,7 @@ if __name__ == "__main__":
     print(a)
     a.InsertMiddle(5, 999)
     print(a)
+
 
     #중간 인덱스
     a.DeleteNode(2)

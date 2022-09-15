@@ -15,20 +15,21 @@ def Hello(count):
     #2: 해야 할 일
     print("hello world", count)
 
+
     #3: 종료 조건의 변화
     count -= 1
 
-    #4: 재귀 호출
+    # 4: 재귀 호출
     Hello(count)
 
 
 Hello(5)
 '''
 
-'''
+
 #==================================
 #팩토리얼
-
+'''
 def factorial(n):
     if n == 1:
         return 1
@@ -62,20 +63,20 @@ def sum(n): # 이 함수의 목표는 0~n 까지의 합을 구하는 것이다
     return n + sum(n-1) # n이 0보다 크면 0에서 n 까지의 합은, n-1까지의 합에 n을 더한 것이다.
 
 print(sum(4)) # 10
-
 '''
+
 
 #=================================================
 #제곱근 구하기
-''''
+'''
 def power(x, n):
     if n == 0:
         return 1
     return x * power(x, n-1)
 
 print(power(2,10)) # 1024
-'''
 
+'''
 
 
 

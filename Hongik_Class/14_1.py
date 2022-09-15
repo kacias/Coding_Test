@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 '''
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -12,8 +13,8 @@ class Solution:
         if l1:
             l1.next = self.mergeTwoLists(l1.next, l2)
         return l1
-'''
 
+'''
 
 #================
 #debugging
@@ -42,6 +43,7 @@ class Solution:
         if l1:
             print("not l1")
             print(l1.val)
+
 
 
 if __name__=="__main__":
@@ -105,5 +107,6 @@ if __name__=="__main__":
 
     print(q)
     #===================================
+
 
 

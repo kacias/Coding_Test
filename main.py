@@ -1,6 +1,5 @@
 import unittest
 
-
 #from chapter2.ch06.pal import Solution
 
 class Solution:
@@ -8,7 +7,7 @@ class Solution:
         strs = []
 
         for char in s:
-            print("char:{}".format(char))
+            #print("char:{}".format(char))
             if char.isalnum():
                 strs.append(char.lower())
 
@@ -19,11 +18,11 @@ class Solution:
         return True
 
 if __name__ == "__main__":
-    a = [1, 2, 4]
-    print(a.pop())
+    #a = [1, 2, 4]
+    #print(a.pop())
 
-    '''
+
     a = Solution()
-    result = a.isPalindrome("111111")
+    result = a.isPalindrome("112411")
     print(result)
-    '''
+

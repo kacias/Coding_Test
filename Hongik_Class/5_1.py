@@ -21,7 +21,10 @@ class Solution:
         for word in strs:
             # 정렬하여 딕셔너리에 추가
             anagrams[''.join(sorted(word))].append(word)
+
+        print("anagrams:{}".format(anagrams))
         return list(anagrams.values())
+
 
 def countLetters(word):
     counter = {}
@@ -35,10 +38,13 @@ if __name__ == "__main__":
 
     #---------------------
     #딕셔너리 사용법
+
     '''
     test = {'a':1, 'b':2}
+
     print(test)
     print(test['a'])
+
 
     for keys, value in test.items():
         print(keys)
@@ -60,11 +66,13 @@ if __name__ == "__main__":
 
     #이렇게 해야 딕셔너리로 변환
     print(dict(d))
+
     '''
+
+
     #=========================
     #.join()
-
-
+    '''
     a = ["1","2","3","4"]
 
     #리스트 각 요소 사이에 특정 문자열을 집어넣을 때
@@ -74,6 +82,7 @@ if __name__ == "__main__":
     #리스트 모든 값을 합칠 때
     b = "".join(a)
     print(b)
+    '''
 
     '''
     aa = countLetters("I am boy")
@@ -81,9 +90,7 @@ if __name__ == "__main__":
     '''
 
 
-    '''
+
     a = Solution()
     b = a.groupAnagrams(["apple", "banana", "tomato", "ppale"])
-
     print(b)
-    '''

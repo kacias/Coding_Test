@@ -15,7 +15,7 @@ class Solution:
 
         return reverse(head)
 '''
-'''
+
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
@@ -42,9 +42,10 @@ class Solution:
 
         return prev
 
+#리스트로 바꾸고, 역순 처리 한뒤, 문자열로 바꾸고, 문자열을 합친다음......
+
+
 '''
-
-
 
 #디버깅
 class Solution:
@@ -68,7 +69,7 @@ class Solution:
 
         return reverse(head)
 
-
+'''
 
 #======================================
 #메인 함수

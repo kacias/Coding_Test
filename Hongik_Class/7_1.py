@@ -3,7 +3,6 @@ from typing import List
 
 import time
 
-
 '''
 #Brute-Force
 class Solution:
@@ -32,26 +31,55 @@ class Solution:
 
                 return nums.index(n), nums[i + 1:].index(complement) + (i + 1)  #검색 범위 축소
                 #return nums.index(n), nums.index(complement)  #그냥 찾기 
-
 '''
 
-'''
+
+
+
 #딕셔너리: 해쉬 테이블로 더 빠르다.
+'''
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_map = {}
-        #print("nums:{}".format(nums))
+        print("nums:{}".format(nums))
         # 키와 값을 바꿔서 딕셔너리로 저장
         for i, num in enumerate(nums):
             nums_map[num] = i
 
-        #print("nums_map:{}".format(nums_map))
+        print("nums_map:{}".format(nums_map))
         # 타겟에서 첫 번째 수를 뺀 결과를 키로 조회
         for i, num in enumerate(nums):
             if target - num in nums_map and i != nums_map[target - num]:
                 return nums.index(num), nums_map[target - num]
+
 '''
 
+'''
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums_map = {}
+        print("nums:{}".format(nums))
+
+        # 키와 값을 바꿔서 딕셔너리로 저장
+        for i, num in enumerate(nums):
+            nums_map[num] = i
+
+        print("nums_map:{}".format(nums_map))
+
+
+
+        # 타겟에서 첫 번째 수를 뺀 결과를 키로 조회
+        for i, num in enumerate(nums):
+            if target - num in nums_map and i != nums_map[target - num]:
+            #if target - num in nums_map:
+
+                print ("i:{}".format(i))
+                print ("num:{}".format(num))
+                print ("nums_map[target - num]:{}".format(nums_map[target - num]))
+                return nums.index(num), nums_map[target - num]
+
+
+'''
 
 '''
 #for 문 통합 
@@ -65,46 +93,51 @@ class Solution:
             nums_map[num] = i
 
             #print(nums_map)
-'''
 
 '''
+
 #======================================================================
 #가장 빠른거
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         left, right = 0, len(nums) - 1
 
-        #sort(?): 정렬을 하면 인덱스값이 흩뜨려짐.
+        #정렬을 하면 인덱스값이 흩뜨려짐.
+        print(nums)
+
+        #nums= sorted(nums)
+        #print(nums)
 
         while not left == right:
 
-            #print("left:{}".format(left))
-            #print("right:{}".format(right))
+            print("left:{}".format(left))
+            print("right:{}".format(right))
 
-            # 합이 타겟보다 크면 오른쪽 포인터를 왼쪽으로
+            # 합이 타겟보다 작으면 오른쪽 포인터를 왼쪽으로
             if nums[left] + nums[right] < target:
                 left += 1
-            # 합이 타겟보다 작으면 왼쪽 포인터를 오른쪽으로
+            # 합이 타겟보다 크면 왼쪽 포인터를 오른쪽으로
             elif nums[left] + nums[right] > target:
                 right -= 1
             else:
                 return left, right
-'''
 
 
 
 if __name__ == "__main__":
 
     #==========
-    '''
-    a = Solution()
-    b= a.twoSum([1,2,5,9,5], 7)
-    print(b)
-    '''
 
-    '''
+    a = Solution()
+    b= a.twoSum([1,2,5,9], 14)
+    print(b)
+
+
+
     #================================================
     #시간 체크
+    '''
     s_time = time.time()
 
     a = Solution()
@@ -113,8 +146,9 @@ if __name__ == "__main__":
     print(b)
 
     print("time elapsed:{}".format(time.time()-s_time))
-    #=================================================
     '''
+    #=================================================
+
 
 
     #==========================
@@ -137,9 +171,10 @@ if __name__ == "__main__":
     '''
 
 
-    '''
+
     #=======================
     #무난한 해법
+    '''
     nums = [1,2,4]
     j = 5
     for idx, i in enumerate(nums):

@@ -9,7 +9,6 @@ from PyQt5.QtWidgets import *
 '''
 app = QApplication(sys.argv)
 
-
 #내용 채우기 
 label = QLabel("Hello world")
 label.show()
@@ -20,6 +19,7 @@ print("before event loop")
 app.exec_()
 print("after event loop")
 '''
+
 
 #=================================
 #하드 코딩 버튼 생성
@@ -38,8 +38,9 @@ app.exec_()
 
 #===========================================
 #여러개 위젯 생성
-
+'''
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
+
 app = QApplication([])
 window = QWidget()
 layout = QVBoxLayout()
@@ -48,7 +49,7 @@ layout.addWidget(QPushButton('Bottom'))
 window.setLayout(layout)
 window.show()
 app.exec_()
-
+'''
 
 
 #===============================
@@ -67,9 +68,10 @@ if __name__ =="__main__":
     app.exec_()
 '''
 
+
 #=========================================
 #코딩으로 버튼 기능 만들기
-'''
+
 class ButtonlabelWindow(QMainWindow):
     def __init__ (self):
         super().__init__()
@@ -103,4 +105,3 @@ if __name__ == "__main__":
     window.show()
     app.exec_()
 
-'''

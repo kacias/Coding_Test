@@ -23,8 +23,6 @@ class Solution:
             print("char:{}".format(char))
             suffix = s[s.index(char):]
             print("suffix:{}".format(suffix))
-
-
             print("set(s):{}".format(set(s)))
             print("set(suffix):{}".format(set(suffix)))
 
@@ -59,20 +57,23 @@ if __name__=="__main__":
 
 
     #문자열을 set로 사용해서 sorted 시키면 기본 구성 요소끼리 정렬시킬 수 있음
-    """"
+    '''
     s = "abcdefff"
     print(set(s))
     print(sorted(set(s)))
+
 
     #==========================
     #문자열 내에서 특정 char 인덱스 값
     print(s.index("c")) #해당 character가 있는 index 값 반환
     print(s[s.index("c"):]) #해당 character 있는 index 이후 문자열 반환
     print(set(s[s.index("c"):])) #해당 character 있는 index 이후 문자열 반환
-    """
+    '''
+
 
     #-----------------------
-    s= "ebcabc"
+    #s= "ebcabc"
+    s= "cbacdcbc"
     a = Solution()
     result = a.removeDuplicateLetters(s)
     print(result)
